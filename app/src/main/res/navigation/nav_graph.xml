@@ -1,6 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/initialFragment">
 
+    <fragment
+        android:id="@+id/initialFragment"
+        android:name="com.example.quizapp.InitialFragment"
+        android:label="fragment_initial"
+        tools:layout="@layout/fragment_initial" >
+        <action
+            android:id="@+id/action_initialFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.example.quizapp.QuestionFragment"
+        android:label="fragment_question"
+        tools:layout="@layout/fragment_question" >
+        <action
+            android:id="@+id/action_questionFragment_to_answerFragment"
+            app:destination="@id/answerFragment" />
+        <action
+            android:id="@+id/action_questionFragment_to_helpFragment"
+            app:destination="@id/helpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/answerFragment"
+        android:name="com.example.quizapp.AnswerFragment"
+        android:label="fragment_answer"
+        tools:layout="@layout/fragment_answer" >
+        <action
+            android:id="@+id/action_answerFragment_to_scoreFragment"
+            app:destination="@id/scoreFragment" />
+        <action
+            android:id="@+id/action_answerFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.example.quizapp.HelpFragment"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help" >
+        <action
+            android:id="@+id/action_helpFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scoreFragment"
+        android:name="com.example.quizapp.ScoreFragment"
+        android:label="fragment_score"
+        tools:layout="@layout/fragment_score" >
+        <action
+            android:id="@+id/action_scoreFragment_to_initialFragment"
+            app:destination="@id/initialFragment"
+            app:popUpTo="@id/initialFragment"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
 </navigation>
