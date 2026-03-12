@@ -42,11 +42,7 @@
         android:id="@+id/helpFragment"
         android:name="com.example.quizapp.HelpFragment"
         android:label="fragment_help"
-        tools:layout="@layout/fragment_help" >
-        <action
-            android:id="@+id/action_helpFragment_to_questionFragment"
-            app:destination="@id/questionFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_help" />
     <fragment
         android:id="@+id/scoreFragment"
         android:name="com.example.quizapp.ScoreFragment"

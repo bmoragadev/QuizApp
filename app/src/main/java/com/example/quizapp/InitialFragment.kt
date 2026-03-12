@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.quizapp.databinding.FragmentInitialBinding
 
 
@@ -22,8 +23,17 @@ class InitialFragment : Fragment() {
         _binding = FragmentInitialBinding.inflate(inflater, container, false)
 
 
+        binding.btnStart.setOnClickListener {
+            findNavController().navigate(R.id.action_initialFragment_to_questionFragment)
+        }
+
 
         return binding.root
+    }
+
+    override fun onDestroy() {
+        _binding = null
+        super.onDestroy()
     }
 
 
