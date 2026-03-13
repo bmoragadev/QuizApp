@@ -5,10 +5,47 @@
     android:layout_height="match_parent"
     tools:context=".HelpFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp"
+        >
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:text="Ayuda"
+            android:textAlignment="center"
+            android:textSize="36sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            />
+
+        <TextView
+            android:id="@+id/tvHint"
+            android:text="Pista: "
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            />
+
+
+        <Button
+            android:id="@+id/btnBack"
+            android:text="Volver a la pregunta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            />
+
+
+    </LinearLayout>
 
 </FrameLayout>

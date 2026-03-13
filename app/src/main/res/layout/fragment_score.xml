@@ -5,10 +5,47 @@
     android:layout_height="match_parent"
     tools:context=".ScoreFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp"
+        >
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:text="Quiz Finalizado"
+            android:textAlignment="center"
+            android:textSize="36sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            />
+
+        <TextView
+            android:id="@+id/tvScore"
+            android:text="Puntaje: "
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            />
+
+
+        <Button
+            android:id="@+id/btnBack"
+            android:text="Volver al Inicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            />
+
+
+    </LinearLayout>
 
 </FrameLayout>

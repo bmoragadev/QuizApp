@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.quizapp.databinding.FragmentHelpBinding
 
 
@@ -19,6 +20,15 @@ class HelpFragment : Fragment() {
     ): View? {
 
         _binding = FragmentHelpBinding.inflate(inflater, container, false)
+
+        val hint = arguments?.getString("hint", "No hay pista disponible")
+
+        binding.tvHint.text = hint.toString()
+
+        binding.btnBack.setOnClickListener {
+            findNavController().popBackStack()
+        }
+
 
         // Inflate the layout for this fragment
         return binding.root

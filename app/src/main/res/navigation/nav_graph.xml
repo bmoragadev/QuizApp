@@ -9,7 +9,7 @@
         android:id="@+id/initialFragment"
         android:name="com.example.quizapp.InitialFragment"
         android:label="fragment_initial"
-        tools:layout="@layout/fragment_initial" >
+        tools:layout="@layout/fragment_initial">
         <action
             android:id="@+id/action_initialFragment_to_questionFragment"
             app:destination="@id/questionFragment" />
@@ -18,7 +18,7 @@
         android:id="@+id/questionFragment"
         android:name="com.example.quizapp.QuestionFragment"
         android:label="fragment_question"
-        tools:layout="@layout/fragment_question" >
+        tools:layout="@layout/fragment_question">
         <action
             android:id="@+id/action_questionFragment_to_answerFragment"
             app:destination="@id/answerFragment" />
@@ -30,7 +30,7 @@
         android:id="@+id/answerFragment"
         android:name="com.example.quizapp.AnswerFragment"
         android:label="fragment_answer"
-        tools:layout="@layout/fragment_answer" >
+        tools:layout="@layout/fragment_answer">
         <action
             android:id="@+id/action_answerFragment_to_scoreFragment"
             app:destination="@id/scoreFragment" />
@@ -47,12 +47,11 @@
         android:id="@+id/scoreFragment"
         android:name="com.example.quizapp.ScoreFragment"
         android:label="fragment_score"
-        tools:layout="@layout/fragment_score" >
+        tools:layout="@layout/fragment_score">
         <action
             android:id="@+id/action_scoreFragment_to_initialFragment"
             app:destination="@id/initialFragment"
             app:popUpTo="@id/initialFragment"
-            app:popUpToInclusive="true"
-            />
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>
